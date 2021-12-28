@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .box{
+                width: 300px;
+                height: 500px;
+                margin: auto;
+                margin-top: 50px;
+                padding-top: 10px;
+                border-radius: 5px;
+                box-shadow: 0px 5px 20px #888888;
+                background-color: white;
+            }
+            .title{
+                color: rgb(0, 200, 0);
+                text-align: center;
+            }
+            .bigletter{
+                font-size: xx-large;
+                letter-spacing: 2px;
+            }
+            .spacing{
+                letter-spacing: 3px;
+            }
+            .EmailPassword{
+                border: none;
+                border-bottom: 1px solid black;
+                width: 250px;
+            }
+            .content{
+                padding-left: 20px;
+            }
+            .submitbutton{
+                margin-left: 85px;
+                width: 100px;
+                height: 50px;
+                background-color: rgb(0, 200, 0);
+                color: white;
+                font-size: larger;
+                border: 0px;
+                border-radius: 5px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+            }
+            .footer{
+                text-align: center;
+                font-size: smaller;
+            }
+        </style>
+    </head>
+    <body style="background-image: url('Image/Plant.jpg');">
+        
+        <div class="box">
+            <div class="title">
+                <div class="bigletter">
+                    Seedvado
+                </div>
+                <div class="spacing">
+                    Connect farmer to seller
+                </div>
+            </div>
+            <br><br><br>
+            <form class="content" action="LoginServlet" method="post"> <!-- action -->
+                <label for="email">Email</label><br>
+                <input type="email" class="EmailPassword" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br><br>
+                <label for="password">Password</label><br>
+                <input type="password" class="EmailPassword" id="password" name="password"><br><br>
+                <input type="checkbox" id="remember" name="remember" value="RememberPassword">
+                <label for="remember"> Remember Me</label><br><br><br>
+                <button type="submit" class="submitbutton">Login</button><br><br>
+            </form>
+            <hr width="75%">
+            <div class="footer">
+                Or log in with<br><br>
+                <a href="https://www.facebook.com/"><img src="Image/Facebook-logo.png" alt="Facebook logo" width="40" height="25"></a>
+                <a href="https://www.google.com/"><img src="Image/Google-logo.png" alt="Google logo" width="25" height="25"></a>
+                <br><br>
+                Don't have account yet? <a href="https://www.google.com/">Sign up</a> <!<!-- Direct to Register part -->
+            </div>
+        </div>
+    </body>
+</html>
