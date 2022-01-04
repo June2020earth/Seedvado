@@ -1,4 +1,26 @@
 <!DOCTYPE html>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="com.model.profile" %>
+<%
+//    profile user;
+//    try{
+//        if (user != null) {
+//                
+//            }
+//    }
+//    catch(Exception e)
+//    {
+//        throw e;
+//    }
+    profile user = (profile)session.getAttribute("user");
+    String username = user.getName();
+    String email = user.getEmail();
+    String gender = user.getGender();
+    String phone = user.getPhone();
+    String address = user.getAddress();
+%>
+
 <html>
     <head>
         <title>Edit Profile</title>
@@ -25,15 +47,19 @@
                 </div>-->
                 <div class="form-group">
                     <label for="uname">User name</label>
-                    <input type="text" class="form-control" name="uname" value="Yong Jing Xuan">                   
+                    <input type="text" class="form-control" name="uname" value="<% out.print(username); %>">                   
                 </div>
                 <div class="form-group">
                     <label for="gender">Gender</label>
-                    <input type="text" class="form-control" name="gender" value="Male">
+                    <input type="text" class="form-control" name="gender" value="<% out.print(gender); %>">
                 </div>
-               <div class="form-group">
+                <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="text" class="form-control" name="phone" value="012345">
+                    <input type="text" class="form-control" name="phone" value="<% out.print(phone); %>">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Address</label>
+                    <input type="text" class="form-control" name="address" value="<% out.print(address); %>">
                 </div>
                 <br>
                 <button type="submit" class="btn btn-light">Save</button>
@@ -47,5 +73,4 @@
         </script>
     </body>
 </html>
-
 
