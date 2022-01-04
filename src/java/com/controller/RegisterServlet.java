@@ -17,6 +17,7 @@ import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,8 +29,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author jingx
  */
-@WebServlet(urlPatterns = {"/EditProfileServlet"})
-public class EditProfileServlet extends HttpServlet {
+@WebServlet(urlPatterns = {"/RegisterServlet"})
+public class RegisterServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,44 +44,32 @@ public class EditProfileServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, ClassNotFoundException {
-        response.setContentType("text/html;charset=UTF-8");
-        String driver = "com.mysql.jdbc.Driver";
-        String dbname = "Seedvado";
-        String url = "jdbc:mysql://localhost/"+dbname+"?";
-        String username = "root";
+        
+        String uname  = request.getParameter("username");
+        String email  = request.getParameter("email");
+        String pass  = request.getParameter("password");
+        String query="INSERT INTO USER VALUES ('',?,?,?,'','','','')";
+
+        String dbName = "seedvado";
+        String url = "jdbc:mysql://localhost/"+dbName+"?";
+        String userName = "root";
         String password = "";
-        HttpSession session = request.getSession();
-        profile user =(profile)session.getAttribute("user");
-        String uname  = request.getParameter("uname");
-        String gender  = request.getParameter("gender");
-        String phone  = request.getParameter("phone");        
-        String address  = request.getParameter("address");
-        String id = user.getUserID();
-        String query="UPDATE USER SET Name=?, Gender=?, Phone=?, Address=?";
-        query+="WHERE UserID=?";
+        
+        ServletContext context = getServletContext( );
+        context.log("first");  
+        
+        String driver = "com.mysql.jdbc.Driver";
         Class.forName(driver);
-        Connection con = DriverManager.getConnection(url,username,password);
-        PreparedStatement st = (PreparedStatement) con.prepareStatement(query);
-        st.setString(1,uname);
-        st.setString(2,gender);
-        st.setString(3,phone);
-        st.setString(4,address);
-        st.setString(5,id);
-        st.executeUpdate();
+        Connection con = DriverManager.getConnection(url, userName, password);
+        java.sql.PreparedStatement statement = con.prepareStatement(query);
+        statement.setString(1, uname);  
+        statement.setString(2, email);
+        statement.setString(3, pass);
+        context.log(statement.toString());        
         
-        
-        user.setName(uname);
-        user.setGender(gender);
-        user.setPhone(phone);
-        user.setAddress(address);
-        
-        session.setAttribute("user", user);
-        
-        st.close();
-        
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/ViewProfile.jsp");
-        dispatcher.forward(request, response);
-//        response.sendRedirect("ViewProfile.jsp");
+        statement.executeUpdate();
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.html");
+            dispatcher.forward(request, response);        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -98,9 +87,9 @@ public class EditProfileServlet extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(EditProfileServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(EditProfileServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -118,9 +107,9 @@ public class EditProfileServlet extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(EditProfileServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(EditProfileServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

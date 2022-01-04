@@ -1,0 +1,153 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 28, 2021, 9:49:09 AM
+    Author     : acer
+*/
+*
+{
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+}
+
+.font-semibold
+{
+width: 199px;
+height: 44px;
+margin:20px auto 0px auto;
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+letter-spacing: 0.08em;
+
+color: #3DBF1D;
+}
+.font-normal
+{
+width: 360px;
+height: 18px;
+margin:5px auto 0px auto;
+
+
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 18px;
+letter-spacing: 0.5em;
+
+color: #3DBF1D;
+
+}
+.regsiterDiv
+{
+    text-align:center;
+    position:absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 481px;
+    height: 632px;
+    left: 749px;
+    top: 44px;
+    align-items:center;
+    justify-content:center;
+}
+#registerForm
+{
+    position:aboslute;
+    margin:auto;
+    text-align:left;
+    width:360px;
+    height:70%;
+}
+#registerSubmit
+{
+background: rgba(61, 191, 29, 0.8);
+border:none;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+width: 163px;
+height: 55px;
+margin:24px auto 57px auto;
+margin-left:100px;
+margin-right:100px;
+border-radius: 13px;
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+color: #FFFFFF;
+line-height: 29px;
+}
+input
+{
+border-width: 0 0 1px;    
+width:360px;
+position:relative;
+margin-bottom:32px;
+margin-top:14px;
+}
+label
+{
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 24px;    
+position:relative;
+display:inline-block;
+}
+#SignUp
+{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 15px;
+position:relative;
+}
+#username
+{
+    margin-top:78px;
+}
+.circle1
+{
+position: absolute;
+width: 271px;
+height: 277px;
+left: 585px;
+top: -113px;
+border-radius:50%;
+background: rgba(61, 191, 29, 0.95);    
+}
+.circle2
+{
+position: absolute;
+width: 271px;
+height: 277px;
+left: 1115px;
+top: 554px;
+border-radius:50%;
+overflow:hidden;
+background: rgba(61, 191, 29, 0.95);    
+}
+.screen
+{
+    overflow:hidden;
+}
+
+
+
+
+
