@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/nbproject/build-impl.xml</file>
-            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/index.html</file>
-            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/Style/bootstrap.min.css</file>
-            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/src/java/com/controller/EditProfileServlet.java</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/AllProductView.jsp</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/PendingOrderView.jsp</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/src/java/com/controller/RegisterServlet.java</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/product.jsp</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/CompleteOrderView.jsp</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/Style/SellerViewProduct.css</file>
         </group>
     </open-files>
 </project-private>
