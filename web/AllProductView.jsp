@@ -17,32 +17,36 @@
     </head>
     <body>
         <%@ include file = "header.jsp" %>
-      <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
-         url = "jdbc:mysql://localhost/seedvado?"
-         user = "root"  password = ""/>
- 
-      <sql:query dataSource = "${snapshot}" var = "result">
-         SELECT * from product;
-      </sql:query>
-         
          <div class="ViewProduct">
             <div class="MenuSection">
                 <ul>
-                    <li><a href="AllProductView.jsp">All Product</a></li>
-                    <li><a href="PendingOrderView.jsp">Pending Order</a></li>
-                    <li><a href="CompleteOrderView.jsp">Complete Order</a></li>
+                    <li><a href="AllProductViewServlet">All Product</a></li>
+                    <li><a href="PendingOrderServlet">Pending Order</a></li>
+                    <li><a href="completedOrderServlet">Complete Order</a></li>
                 </ul>
             </div>
+            <div class="RightSection">
             <div class="CardSection">
-                <c:forEach var = "row" items = "${result.rows}">
+                    <% 
+                        ArrayList rows = new ArrayList();
+                        rows=(ArrayList)request.getAttribute("ProductList");
+                        for(int i=0;i<rows.size();i++) {
+                            ArrayList row=(ArrayList)rows.get(i);
+                    %>   
+                    <div class="product-delete">
                     <jsp:include page="product.jsp">
-                        <jsp:param name="Name" value="${row.Name}"/>
-                        <jsp:param name="Picture" value="${row.Picture}"/>
-                        <jsp:param name="Description" value="${row.Description}"/>
-                        <jsp:param name="Price" value="${row.Price}"/>
-                        <jsp:param name="Rating" value="${row.Rating}"/>
+                        <jsp:param name="ProductID" value="<%=row.get(0)%>"/>
+                        <jsp:param name="Name" value="<%=row.get(1)%>"/>
+                        <jsp:param name="Description" value="<%=row.get(2)%>"/>
+                        <jsp:param name="Price" value="<%=row.get(3)%>"/>
+                        <jsp:param name="PictureData" value="<%=row.get(5)%>"/>
+                        <jsp:param name="Rating" value="<%=row.get(4)%>"/>
                     </jsp:include>
-                </c:forEach>
+                        <a href="AllProductViewServlet?ProductID=<%=row.get(0)%>"><img id="deleteButton" src="Image/delete_black_24dp.svg"></a>
+                    </div>
+                    <%}%>
+            </div>
+                <button id="AddProductButton"><a href="AddProduct.jsp">Add</a></button>
             </div>
         </div>
     </body>

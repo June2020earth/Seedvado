@@ -5,9 +5,13 @@
         <group>
             <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/AllProductView.jsp</file>
             <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/PendingOrderView.jsp</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/Style/PendingOrder.css</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/Style/style.css</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/src/java/com/controller/PendingOrderServlet.java</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/src/java/com/controller/EditOrderCompleteServlet.java</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/src/java/com/controller/LoginServlet.java</file>
             <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/src/java/com/controller/RegisterServlet.java</file>
             <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/product.jsp</file>
-            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/CompleteOrderView.jsp</file>
             <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/Style/SellerViewProduct.css</file>
         </group>
     </open-files>

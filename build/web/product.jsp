@@ -30,15 +30,31 @@
 
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="Style/style.css"/>
+		<link type="text/css" rel="stylesheet" href="Style/product.css"/>
+                
         
 </head>
     <body>
         <div class="product">
-											<div class="product-img">
-												<img src="Image/<%=request.getParameter("Picture")%>.jpg" alt="">
+            <% 
+                String Page = request.getParameter("Page");
+                if(Page.equals("CompletedOrder"))
+                {
+            %>
+            <form id="orderForm" action="completedOrderServlet" method="post">
+            <%  
+                }else if(Page.equals("PendingOrder")){
+            %>
+            <form id="orderForm" action="PendingOrderServlet" method="post">
+            <%}%>
+                <input type="text" value="<%=request.getParameter("ProductID")%>" id="productID" name="productID" hidden>
+                <input type="text" value="<%=request.getParameter("Date")%>" id="Date" name="Date" hidden>
+                <div onclick="this.parentNode.submit()" id="unsetDiv">
+											<div class="product-img" >
+												<img class="inside-img" src="data:image/gif;base64,<%=request.getParameter("PictureData")%>" alt="">
 												<div class="product-label">
-													<span class="sale">-30%</span>
-													<span class="new">NEW</span>
+													<!--<span class="sale">-30%</span>
+													<span class="new">NEW</span>-->
 												</div>
 											</div>
 											<div class="product-body">
@@ -47,7 +63,7 @@
                                                                                                 DecimalFormat f = new DecimalFormat("##.00");
                                                                                                 int rating=Integer.parseInt(request.getParameter("Rating"));
                                                                                             %>
-												<h3 class="product-name"><a href="#"><%=request.getParameter("Name") %></a></h3>
+												<h3 class="product-name"><%=request.getParameter("Name") %></h3>
 												<h4 class="product-price">RM <%=f.format(price)%></h4>
 												<p class="product-category"><%=request.getParameter("Description") %></p>
 												<div class="product-rating">
@@ -60,7 +76,8 @@
 												</div>
 										
 											</div>
-											
-										</div>
+                </div>
+            </form>                        
+	</div>
     </body>
 </html>

@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 7, 2022, 8:28:44 PM
+    Author     : acer
+*/
+.ViewProduct
+{
+    margin:30px;
+    display:flex;
+    width:100%;
+}
+.MenuSection
+{
+    width:20%;
+}
+.CardSection
+{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+}
+a:hover
+{
+    color:#03dd65;
+}
+.RightSection
+{
+    width:80%;
+}
+.cur-month,.cur-year,.cur-all
+{
+
+}
+.product-delete
+{
+    width:100%;
+    height:93%;
+    margin-right:5%;
+    flex: 0 0 25%;
+}
+.product-section
+{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+}
+.PendingOrderClass
+{
+    width:90%;
+    border-radius: 8px 8px 0px 0px;
+}
+.PendingOrderClass td
+{
+    height:40px;
+    font-size:14px;
+    padding-left:10px;
+}
+.PendingOrderClass th
+{
+    padding-left:10px;
+    background-color:#03dd65;
+    font-size:14px;
+    font-weight:700;
+    height:40px;
+}
+.PendingOrderClass tr td
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.completeButton
+{
+    background-color:#03dd65;
+    font-size:14px;
+    color:white;
+    border:none;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius:30px;
+}

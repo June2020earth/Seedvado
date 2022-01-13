@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 10, 2022, 2:32:34 PM
+    Author     : acer
+*/
+.PendingOrderClass
+{
+    width:90%;
+    border-radius: 8px 8px 0px 0px;
+}
+.PendingOrderClass td
+{
+    height:40px;
+    font-size:14px;
+    padding-left:10px;
+}
+.PendingOrderClass th
+{
+    padding-left:10px;
+    background-color:#03dd65;
+    font-size:14px;
+    font-weight:700;
+    height:40px;
+}
+.PendingOrderClass tr td
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.completeButton
+{
+    background-color:#03dd65;
+    font-size:14px;
+    color:white;
+    border:none;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius:30px;
+}
