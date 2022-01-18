@@ -28,10 +28,13 @@
             <div class="RightSection">
             <div class="CardSection">
                     <% 
-                        ArrayList rows = new ArrayList();
+        ServletContext context = getServletContext( );
+        context.log("in servlet page");  
+        ArrayList rows = new ArrayList();
                         rows=(ArrayList)request.getAttribute("ProductList");
                         for(int i=0;i<rows.size();i++) {
                             ArrayList row=(ArrayList)rows.get(i);
+        context.log("get description");  
                     %>   
                     <div class="product-delete">
                     <jsp:include page="product.jsp">
@@ -41,8 +44,10 @@
                         <jsp:param name="Price" value="<%=row.get(3)%>"/>
                         <jsp:param name="PictureData" value="<%=row.get(5)%>"/>
                         <jsp:param name="Rating" value="<%=row.get(4)%>"/>
+                        <jsp:param name="Page" value="CompletedOrder"/>
                     </jsp:include>
-                        <a href="AllProductViewServlet?ProductID=<%=row.get(0)%>"><img id="deleteButton" src="Image/delete_black_24dp.svg"></a>
+                        <% context.log("get description"); %>
+                        <a href="AllProductViewServlet?ProductID=<%=row.get(1)%>"><img id="deleteButton" src="Image/delete_black_24dp.svg"></a>
                     </div>
                     <%}%>
             </div>

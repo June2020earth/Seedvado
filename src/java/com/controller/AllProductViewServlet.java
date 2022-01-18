@@ -122,7 +122,7 @@ public class AllProductViewServlet extends HttpServlet {
         request.setAttribute("ProductList", Rows);
             context.log("success");
             RequestDispatcher dispatcher = request.getRequestDispatcher("AllProductView.jsp");
-            context.log("Redirecting");
+            context.log("RedirectingProductView");
             dispatcher.forward(request, response);        
     }
 
