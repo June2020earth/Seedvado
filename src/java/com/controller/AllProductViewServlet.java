@@ -45,7 +45,6 @@ public class AllProductViewServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         
-        String query="SELECT * from product";
 
         String dbName = "seedvado";
         String url = "jdbc:mysql://localhost/"+dbName+"?";
@@ -57,9 +56,34 @@ public class AllProductViewServlet extends HttpServlet {
         
         String driver = "com.mysql.jdbc.Driver";
         Class.forName(driver);
-        Connection con = DriverManager.getConnection(url, userName, password);
-        java.sql.PreparedStatement statement = con.prepareStatement(query);
+        Connection con;
+        java.sql.PreparedStatement statement;
+
+        String query ="";
+   if(request.getParameter("ProductID")!=null)
+   {
+        String ProductID =request.getParameter("ProductID");
+        query="DELETE FROM product WHERE ProductID=?;";
+       
+        context = getServletContext( );
+        context.log("inside the servlet");  
+        
+        driver = "com.mysql.jdbc.Driver";
+        Class.forName(driver);
+        con = DriverManager.getConnection(url, userName, password);
+        statement = con.prepareStatement(query);
         context.log(query);  
+        statement.setString(1, ProductID);  
+        context.log(statement.toString());        
+        
+        statement.executeUpdate();       
+   }
+
+        query="SELECT * from product";
+        context.log(query);  
+        Class.forName(driver);
+        con = DriverManager.getConnection(url, userName, password);
+        statement = con.prepareStatement(query);
         context.log(statement.toString());        
         
         ResultSet rs = statement.executeQuery();
@@ -100,24 +124,7 @@ public class AllProductViewServlet extends HttpServlet {
        Rows.add(row);
                    context.log("success1");
    }        
-   if(request.getParameter("ProductID")!=null)
-   {
-        String ProductID =request.getParameter("ProductID");
-        query="DELETE FROM product WHERE ProductID=?;";
-       
-        context = getServletContext( );
-        context.log("inside the servlet");  
-        
-        driver = "com.mysql.jdbc.Driver";
-        Class.forName(driver);
-        con = DriverManager.getConnection(url, userName, password);
-        statement = con.prepareStatement(query);
-        context.log(query);  
-        statement.setString(1, ProductID);  
-        context.log(statement.toString());        
-        
-        statement.executeUpdate();       
-   }
+
         
         request.setAttribute("ProductList", Rows);
             context.log("success");

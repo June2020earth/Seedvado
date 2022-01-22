@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/Style/PendingOrder.css</file>
-            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/Style/completedOrder.css</file>
-            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/completedOrder.jsp</file>
-            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/product.jsp</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/web/AllProductView.jsp</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/src/java/com/controller/AddProductServlet.java</file>
+            <file>file:/D:/UTM%20DEGREE/year3/sem1/Internet%20Programming/Project/Group/Seedvado/src/java/com/controller/AllProductViewServlet.java</file>
         </group>
     </open-files>
 </project-private>

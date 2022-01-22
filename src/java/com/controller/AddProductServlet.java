@@ -89,6 +89,7 @@ public class AddProductServlet extends HttpServlet {
         context.log(statement.toString());        
         
         statement.executeUpdate();     
+        context.log("first");        
                 
             RequestDispatcher dispatcher = request.getRequestDispatcher("AllProductViewServlet");
             try {

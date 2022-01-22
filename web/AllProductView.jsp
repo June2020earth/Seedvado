@@ -47,7 +47,7 @@
                         <jsp:param name="Page" value="CompletedOrder"/>
                     </jsp:include>
                         <% context.log("get description"); %>
-                        <a href="AllProductViewServlet?ProductID=<%=row.get(1)%>"><img id="deleteButton" src="Image/delete_black_24dp.svg"></a>
+                        <a href="AllProductViewServlet?ProductID=<%=row.get(0)%>"><img id="deleteButton" src="Image/delete_black_24dp.svg"></a>
                     </div>
                     <%}%>
             </div>
